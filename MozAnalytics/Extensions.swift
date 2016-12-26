@@ -23,6 +23,7 @@ extension String {
     ///
     /// Provides an HMAC-SHA1 hash of the Access ID, Expires parameter, 
     /// and the Secret Key for a Mozscape API Request.
+    /// See: https://moz.com/help/guides/moz-api/mozscape/getting-started-with-mozscape/signed-authentication
     ///
     /// This method uses existing Objective-C Common Crypto library
     /// to create the HMAC-SHA1 hash.

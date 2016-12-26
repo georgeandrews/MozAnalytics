@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Andrews Jr, George. All rights reserved.
 //
 
+/// An enumeration for the response fields used in this application.
 enum ResponseField: String {
     case TITLE = "ut",
     URL = "uu",
@@ -20,8 +21,15 @@ enum ResponseField: String {
 
 class Metrics {
     
+    ///
+    /// ResponseField values to use when querying Mozscape API.
+    ///
     static let responseFields = [ResponseField.URL, ResponseField.MOZ_RANK, ResponseField.PAGE_AUTHORITY, ResponseField.DOMAIN_AUTHORITY, ResponseField.EXT_EQUITY_LINKS]
     
+    ///
+    /// Dictionary containing description and value details for each
+    /// response field used in this application.
+    ///
     static let responseFieldDetails: [ResponseField:[Any]] = [
         ResponseField.TITLE:["Page Title", 1 as Int64],
         ResponseField.URL:["Canonical URL", 4 as Int64],
