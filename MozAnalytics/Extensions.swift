@@ -138,9 +138,12 @@ extension UIAlertController {
     }
 }
 
-// MARK: - Extension for populating the ResponseField UITableViewCell.
+// MARK: - Extension for populating UITableViewCell for ResponseField with appropriate value.
 extension UITableViewDataSource {
-    func populateResponseFieldCell(_ cell: UITableViewCell, description: String, value: AnyObject?) {
+    func populate(_ cell: UITableViewCell, for responseField: ResponseField, with value: AnyObject?) {
+        
+        let description = Metrics.responseFieldDetails[responseField]![0] as! String
+        
         if let valueString = value as? String {
             cell.textLabel!.text = "\(description): \(valueString)"
         } else if let valueNumber = value as? NSNumber {

@@ -183,13 +183,10 @@ extension SearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-        // Retrieve responseField from valuesToPull and use to access value from mozJSONDictionary
         let responseField = Metrics.responseFields[indexPath.row]
-        
-        let description = Metrics.responseFieldDetails[responseField]![0] as! String
         let value: AnyObject? = mozData?.value(forKey: responseField.rawValue) as AnyObject?
         
-        populateResponseFieldCell(cell, description: description, value: value)
+        populate(cell, for: responseField, with: value)
         
         return cell
     }
