@@ -13,13 +13,6 @@ struct K {
     static let accessID = "accessID"
     static let secretKey = "v_Data"
     
-<<<<<<< HEAD
-=======
-    struct RestoreID {
-        static let settings = "Settings"
-    }
-    
->>>>>>> bcb94d1ccb0c9baa6ed6da445d1295720734e259
     struct ReuseID {
         static let cell = "Cell"
     }
