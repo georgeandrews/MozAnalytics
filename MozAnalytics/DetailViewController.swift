@@ -34,7 +34,7 @@ class DetailViewController: UITableViewController {
         let responseField = Metrics.responseFields[indexPath.row]
         let value: AnyObject? = mozResult?.value(forKey: responseField.rawValue) as AnyObject?
         
-        populate(cell, for: responseField, with: value)
+        populate(cell, for: responseField, using: value)
         
         return cell
     }

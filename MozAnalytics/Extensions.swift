@@ -140,7 +140,7 @@ extension UIAlertController {
 
 // MARK: - Extension for populating UITableViewCell for ResponseField with appropriate value.
 extension UITableViewDataSource {
-    func populate(_ cell: UITableViewCell, for responseField: ResponseField, with value: AnyObject?) {
+    func populate(_ cell: UITableViewCell, for responseField: ResponseField, using value: AnyObject?) {
         
         let description = Metrics.responseFieldDetails[responseField]![0] as! String
         

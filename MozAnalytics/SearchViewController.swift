@@ -186,7 +186,7 @@ extension SearchViewController: UITableViewDataSource {
         let responseField = Metrics.responseFields[indexPath.row]
         let value: AnyObject? = mozData?.value(forKey: responseField.rawValue) as AnyObject?
         
-        populate(cell, for: responseField, with: value)
+        populate(cell, for: responseField, using: value)
         
         return cell
     }
