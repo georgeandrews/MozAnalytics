@@ -27,6 +27,10 @@ class MozResult: NSManagedObject {
         self.externalLinks = externalLinks
     }
     
+    /// 
+    /// Helper method for retrieving property values for a MozResult
+    /// object when populating ResponseField UITableViewCell(s).
+    ///
     override func value(forKey key: String) -> Any? {
         switch key {
         case ResponseField.URL.rawValue:
