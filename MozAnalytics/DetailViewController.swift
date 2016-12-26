@@ -7,14 +7,22 @@
 //
 
 import UIKit
+<<<<<<< HEAD
 import CoreData
 
 class DetailViewController: UITableViewController {
+=======
+
+class DetailViewController: UIViewController, UITableViewDataSource {
+    
+    @IBOutlet weak var detailTableView: UITableView!
+>>>>>>> bcb94d1ccb0c9baa6ed6da445d1295720734e259
     
     var mozResult: MozResult?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+<<<<<<< HEAD
         // Do any additional setup after loading the view, typically from a nib.
     }
         
@@ -38,10 +46,37 @@ class DetailViewController: UITableViewController {
         let value: AnyObject? = mozResult?.value(forKey: responseField.rawValue) as AnyObject?
         
         populateResponseFieldCell(cell, description: description, value: value)
+=======
+        detailTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: K.ReuseID.cell)
+        detailTableView.dataSource = self
+        detailTableView.reloadData()
+    }
+    
+    // MARK: UITableViewDataSource
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return ResponseField.valuesToPull.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = self.detailTableView.dequeueReusableCellWithIdentifier(K.ReuseID.cell, forIndexPath: indexPath) 
+        
+        // Retrieve responseField from valuesToPull and use to access value from result object
+        let responseField = ResponseField.valuesToPull[indexPath.row]
+        
+        let description = Metrics.responseFields[responseField]![0] as! String
+        let value: AnyObject? = mozResult?.valueForKey(responseField.rawValue)
+        
+        populateCell(cell, description: description, value: value)
+>>>>>>> bcb94d1ccb0c9baa6ed6da445d1295720734e259
         
         return cell
     }
     
+<<<<<<< HEAD
     // MARK: - Application State
     override func encodeRestorableState(with coder: NSCoder) {
         
@@ -63,6 +98,16 @@ class DetailViewController: UITableViewController {
         }
         
         super.decodeRestorableState(with: coder)
+=======
+    func populateCell(cell: UITableViewCell, description: String, value: AnyObject?) {
+        if let valueString = value as? String {
+            cell.textLabel!.text = "\(description): \(valueString)"
+        } else if let valueNumber = value as? NSNumber {
+            cell.textLabel!.text = "\(description): \(valueNumber.stringValue)"
+        } else {
+            cell.textLabel!.text = "\(description): "
+        }
+>>>>>>> bcb94d1ccb0c9baa6ed6da445d1295720734e259
     }
     
 }

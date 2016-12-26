@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<<<<<<< HEAD
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15G1004" minimumToolsVersion="Automatic">
     <entity name="MozResult" representedClassName=".MozResult" syncable="YES">
+=======
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15B42" minimumToolsVersion="Automatic">
+    <entity name="MozResult" representedClassName="MozResult" syncable="YES">
+>>>>>>> bcb94d1ccb0c9baa6ed6da445d1295720734e259
         <attribute name="canonicalURL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="domainAuthority" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="externalLinks" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="mozRank" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+<<<<<<< HEAD
         <attribute name="pageAuthority" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
     </entity>
     <elements>
         <element name="MozResult" positionX="-63" positionY="-18" width="128" height="120"/>
+=======
+        <attribute name="mozSpam" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="mozTrust" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="pageAuthority" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="MozResult" positionX="-63" positionY="-18" width="128" height="165"/>
+>>>>>>> bcb94d1ccb0c9baa6ed6da445d1295720734e259
     </elements>
 </model>

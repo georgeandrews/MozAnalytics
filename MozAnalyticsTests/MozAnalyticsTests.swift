@@ -32,7 +32,11 @@ class MozAnalyticsTests: XCTestCase {
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
+<<<<<<< HEAD
         self.measure() {
+=======
+        self.measureBlock() {
+>>>>>>> bcb94d1ccb0c9baa6ed6da445d1295720734e259
             // Put the code you want to measure the time of here.
         }
     }
