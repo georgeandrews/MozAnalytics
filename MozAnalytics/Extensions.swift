@@ -10,11 +10,23 @@ import UIKit
 // MARK: - Extension for Mozscape-related Strings
 extension String {
     
+    ///
+    /// Returns a String by replacing occurrences of ' ' with '+'
+    /// and by adding percent encoding using the '.urlHostAllowed'
+    /// character set.
+    ///
     func urlencode() -> String {
         let stringToEncode = self.replacingOccurrences(of: " ", with: "+")
         return stringToEncode.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlHostAllowed)!
     }
     
+    ///
+    /// Provides an HMAC-SHA1 hash of the Access ID, Expires parameter, 
+    /// and the Secret Key for a Mozscape API Request.
+    ///
+    /// This method uses existing Objective-C Common Crypto library
+    /// to create the HMAC-SHA1 hash.
+    ///
     func hmacsha1(key: String) -> Data {
         
         let dataToDigest = self.data(using: String.Encoding.utf8)
@@ -125,6 +137,7 @@ extension UIAlertController {
     }
 }
 
+// MARK: - Extension for populating the ResponseField UITableViewCell.
 extension UITableViewDataSource {
     func populateResponseFieldCell(_ cell: UITableViewCell, description: String, value: AnyObject?) {
         if let valueString = value as? String {
