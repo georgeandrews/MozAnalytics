@@ -7,7 +7,7 @@
 
 import UIKit
 
-// MARK: - Extension for Mozscape-related Strings
+// MARK: Extension for Mozscape-related Strings
 extension String {
     
     ///

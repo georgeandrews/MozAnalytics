@@ -23,6 +23,7 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // 1. Turn off the autocapitalization for the search bar
         searchBar.autocapitalizationType = .none
         
         // UISearchBarDelegate and UITableViewDataSource protocols 
