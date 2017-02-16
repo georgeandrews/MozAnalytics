@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5E30FBF91CA6169B00F19060 /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E30FBF81CA6169B00F19060 /* KeychainWrapper.m */; };
 		5E3ADE4B1E10D36D000EB0E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E3ADE491E10D36D000EB0E0 /* LaunchScreen.storyboard */; };
+		5E3DC3281E554B8D0027B20B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5E3DC3271E554B8D0027B20B /* .gitignore */; };
 		5EC6149D1DBBCD6B007C1F57 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC6149C1DBBCD6B007C1F57 /* Extensions.swift */; };
 		67D8BD901BA212F2004FA2BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D8BD8F1BA212F2004FA2BC /* AppDelegate.swift */; };
 		67D8BD931BA212F2004FA2BC /* MozAnalytics.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 67D8BD911BA212F2004FA2BC /* MozAnalytics.xcdatamodeld */; };
@@ -38,6 +39,7 @@
 		5E30FBF71CA6169B00F19060 /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
 		5E30FBF81CA6169B00F19060 /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
 		5E3ADE4A1E10D36D000EB0E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5E3DC3271E554B8D0027B20B /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		5EC6149C1DBBCD6B007C1F57 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		5EF830931DEF99F2004CCE72 /* MozAnalytics.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MozAnalytics.entitlements; sourceTree = "<group>"; };
 		67D8BD8A1BA212F2004FA2BC /* MozAnalytics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MozAnalytics.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,6 +175,7 @@
 			children = (
 				A3A6FF2E1BA8B7E200F112E8 /* Mozscape.swift */,
 				A30C8F2F1BAB53F900F1613A /* Metrics.swift */,
+				5E3DC3271E554B8D0027B20B /* .gitignore */,
 			);
 			name = "Moz Analytics";
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E3DC3281E554B8D0027B20B /* .gitignore in Resources */,
 				5E3ADE4B1E10D36D000EB0E0 /* LaunchScreen.storyboard in Resources */,
 				67D8BD981BA212F2004FA2BC /* Main.storyboard in Resources */,
 				67D8BD9A1BA212F2004FA2BC /* Images.xcassets in Resources */,
