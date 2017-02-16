@@ -128,7 +128,7 @@ extension SearchViewController: UISearchBarDelegate {
         
         if let data = data {
           
-          let statusCode = (httpResponse as! HTTPURLResponse).statusCode
+          let statusCode = httpResponse?.statusCode
           
           if statusCode != 200 {
             DispatchQueue.main.async {

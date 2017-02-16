@@ -25,7 +25,7 @@ class Mozscape {
   ///
   /// URL for Managing Mozscape API Key: https://moz.com/products/api/keys
   ///
-  class func retrieveDataFromMozAPI(_ urlToSearchFor: String, accessID: String, secretKey: String, completion: @escaping ((_ data: Data?, _ httpResponse: URLResponse?) -> Void)) {
+  class func retrieveDataFromMozAPI(_ urlToSearchFor: String, accessID: String, secretKey: String, completion: @escaping ((_ data: Data?, _ httpResponse: HTTPURLResponse?) -> Void)) {
     
     let mozscapeURL = makeMozscapeURL(urlToSearchFor: urlToSearchFor, accessID: accessID, secretKey: secretKey)
     
@@ -71,11 +71,11 @@ class Mozscape {
   ///
   /// Submits the data task for retrieving data from the Mozscape API.
   ///
-  fileprivate static func loadDataFrom(url: URL, completion:@escaping (_ data: Data?, _ httpResponse: URLResponse?) -> Void) {
+  fileprivate static func loadDataFrom(url: URL, completion:@escaping (_ data: Data?, _ httpResponse: HTTPURLResponse?) -> Void) {
     
     let loadDataTask = URLSession.shared.dataTask(with: url) {
       data, response, error in
-      completion(data, response) // ignoring error here and will instead interrogate data later...
+      completion(data, response as? HTTPURLResponse) // ignoring error here and will instead interrogate data later...
     }
     
     loadDataTask.resume()
