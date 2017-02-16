@@ -75,7 +75,7 @@ class Mozscape {
     
     let loadDataTask = URLSession.shared.dataTask(with: url) {
       data, response, error in
-      completion(data, response)
+      completion(data, response) // ignoring error here and will instead interrogate data later...
     }
     
     loadDataTask.resume()

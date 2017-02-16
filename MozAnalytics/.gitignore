@@ -16,7 +16,7 @@ DerivedData/
 *.perspectivev3
 !default.perspectivev3
 xcuserdata/
-MozAnalytics.xcodeproj/project.xcworkspace/xcuserdata/george.xcuserdatad/UserInterfaceState.xcuserstate
+*.xcuserstate
 
 ## Other
 *.moved-aside
