@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 George Andrews. All rights reserved.
 //
 
+import Foundation
+
 class Mozscape {
     
     static let urlMetricsURL = "https://lsapi.seomoz.com/linkscape/url-metrics/"
