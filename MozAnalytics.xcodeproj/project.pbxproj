@@ -9,8 +9,16 @@
 /* Begin PBXBuildFile section */
 		5E30FBF91CA6169B00F19060 /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E30FBF81CA6169B00F19060 /* KeychainWrapper.m */; };
 		5E3ADE4B1E10D36D000EB0E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E3ADE491E10D36D000EB0E0 /* LaunchScreen.storyboard */; };
-		5E3DC3281E554B8D0027B20B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5E3DC3271E554B8D0027B20B /* .gitignore */; };
 		5EC6149D1DBBCD6B007C1F57 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC6149C1DBBCD6B007C1F57 /* Extensions.swift */; };
+		5ED24A9D1E5D5FF500F227B0 /* SavedResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33986221BB1D93500AEA52B /* SavedResultsViewController.swift */; };
+		5ED24A9E1E5D607A00F227B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D8BD8F1BA212F2004FA2BC /* AppDelegate.swift */; };
+		5ED24A9F1E5D609100F227B0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC6149C1DBBCD6B007C1F57 /* Extensions.swift */; };
+		5ED24AA01E5D609500F227B0 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30C8F2D1BAB406700F1613A /* SearchViewController.swift */; };
+		5ED24AA11E5D609800F227B0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D8BD941BA212F2004FA2BC /* SettingsViewController.swift */; };
+		5ED24AA21E5D609C00F227B0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33986261BB1E87500AEA52B /* DetailViewController.swift */; };
+		5ED24AA31E5D60A100F227B0 /* MozResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33986241BB1E02200AEA52B /* MozResult.swift */; };
+		5ED24AA41E5D60A400F227B0 /* Mozscape.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A6FF2E1BA8B7E200F112E8 /* Mozscape.swift */; };
+		5ED24AA51E5D60A700F227B0 /* Metrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30C8F2F1BAB53F900F1613A /* Metrics.swift */; };
 		67D8BD901BA212F2004FA2BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D8BD8F1BA212F2004FA2BC /* AppDelegate.swift */; };
 		67D8BD931BA212F2004FA2BC /* MozAnalytics.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 67D8BD911BA212F2004FA2BC /* MozAnalytics.xcdatamodeld */; };
 		67D8BD951BA212F2004FA2BC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D8BD941BA212F2004FA2BC /* SettingsViewController.swift */; };
@@ -39,7 +47,6 @@
 		5E30FBF71CA6169B00F19060 /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
 		5E30FBF81CA6169B00F19060 /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
 		5E3ADE4A1E10D36D000EB0E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		5E3DC3271E554B8D0027B20B /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		5EC6149C1DBBCD6B007C1F57 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		5EF830931DEF99F2004CCE72 /* MozAnalytics.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MozAnalytics.entitlements; sourceTree = "<group>"; };
 		67D8BD8A1BA212F2004FA2BC /* MozAnalytics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MozAnalytics.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,7 +182,6 @@
 			children = (
 				A3A6FF2E1BA8B7E200F112E8 /* Mozscape.swift */,
 				A30C8F2F1BAB53F900F1613A /* Metrics.swift */,
-				5E3DC3271E554B8D0027B20B /* .gitignore */,
 			);
 			name = "Moz Analytics";
 			sourceTree = "<group>";
@@ -271,7 +277,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E3DC3281E554B8D0027B20B /* .gitignore in Resources */,
 				5E3ADE4B1E10D36D000EB0E0 /* LaunchScreen.storyboard in Resources */,
 				67D8BD981BA212F2004FA2BC /* Main.storyboard in Resources */,
 				67D8BD9A1BA212F2004FA2BC /* Images.xcassets in Resources */,
@@ -326,7 +331,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ED24AA01E5D609500F227B0 /* SearchViewController.swift in Sources */,
+				5ED24AA41E5D60A400F227B0 /* Mozscape.swift in Sources */,
+				5ED24AA51E5D60A700F227B0 /* Metrics.swift in Sources */,
+				5ED24A9F1E5D609100F227B0 /* Extensions.swift in Sources */,
+				5ED24AA11E5D609800F227B0 /* SettingsViewController.swift in Sources */,
+				5ED24A9E1E5D607A00F227B0 /* AppDelegate.swift in Sources */,
 				67D8BDA91BA212F2004FA2BC /* MozAnalyticsTests.swift in Sources */,
+				5ED24AA31E5D60A100F227B0 /* MozResult.swift in Sources */,
+				5ED24A9D1E5D5FF500F227B0 /* SavedResultsViewController.swift in Sources */,
+				5ED24AA21E5D609C00F227B0 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +396,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -430,6 +445,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -454,6 +470,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MozAnalytics/MozAnalytics.entitlements;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = EJKR6DJY6J;
 				INFOPLIST_FILE = MozAnalytics/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -470,6 +487,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MozAnalytics/MozAnalytics.entitlements;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = EJKR6DJY6J;
 				INFOPLIST_FILE = MozAnalytics/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -485,6 +503,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEFINES_MODULE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -506,6 +525,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEFINES_MODULE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
